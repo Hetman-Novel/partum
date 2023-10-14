@@ -1528,6 +1528,15 @@ body._touch .header .menu__list > li._active .menu__arrow {
   transform: rotateZ(45deg);
 }
 
+.menu-item-language .menu__arrow {
+  display: none;
+}
+
+.menu-item-language .menu__sub-list {
+  min-width: auto !important;
+  width: 65px !important;
+}
+
 /* Page - Home */
 
 .wrap-fs-and-about {
@@ -2900,6 +2909,327 @@ body._touch .header .menu__list > li._active .menu__arrow {
   margin-top: 94px;
 }
 
+/* Page - Work with us */
+
+.work-with-us__loaded-above-form {
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  transition: 0.3s ease 0s;
+  z-index: 3;
+}
+
+.work-with-us__form {
+  margin-top: 8px;
+  position: relative;
+}
+
+.work-with-us__form._sending .work-with-us__loaded-above-form {
+  opacity: 1;
+}
+
+.work-with-us__form._sending .work-with-us__wrapFieldUpload,
+.work-with-us__form._sending .work-with-us__wrapFields .work-with-us__form._sending .work-with-us__submit {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.work-with-us__form._sending .work-with-us__wrapFieldUpload,
+.work-with-us__form._sending .work-with-us__wrapFields {
+  opacity: 0.4;
+}
+
+.work-with-us__form._sending .work-with-us__wrapFieldUpload input::-moz-placeholder, .work-with-us__form._sending .work-with-us__wrapFields input::-moz-placeholder {
+  pointer-events: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.work-with-us__form._sending .work-with-us__wrapFieldUpload label,
+.work-with-us__form._sending .work-with-us__wrapFieldUpload input,
+.work-with-us__form._sending .work-with-us__wrapFieldUpload input::placeholder,
+.work-with-us__form._sending .work-with-us__wrapFieldUpload textarea,
+.work-with-us__form._sending .work-with-us__wrapFields label,
+.work-with-us__form._sending .work-with-us__wrapFields input,
+.work-with-us__form._sending .work-with-us__wrapFields input::placeholder,
+.work-with-us__form._sending .work-with-us__wrapFields textarea {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.work-with-us__form._sending .work-with-us__submit:hover {
+  background-color: #1b1b1c;
+  cursor: not-allowed;
+}
+
+.work-with-us__form._sending .spinner {
+  display: block;
+}
+
+.work-with-us__form .spinner {
+  animation: rotate 2s linear infinite;
+  display: none;
+  height: 20px;
+  margin-left: 15px;
+  width: 20px;
+}
+
+.work-with-us__form .spinner circle {
+  stroke: #fff;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+.work-with-us__wrapFields {
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.3s ease 0s;
+}
+
+.work-with-us__wrapField {
+  margin-bottom: 49px;
+  width: 50%;
+}
+
+.work-with-us__wrapField.wrapFieldMessage {
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.work-with-us__wrapField.wrapFieldMessage textarea {
+  height: 326px;
+}
+
+.work-with-us__wrapField label {
+  display: table;
+  font-size: 18.168px;
+  font-weight: 500;
+  line-height: 151.466%;
+  margin-bottom: 13px;
+  text-transform: capitalize;
+}
+
+.work-with-us__wrapField input,
+.work-with-us__wrapField textarea {
+  border: 1px solid #C8CACD;
+  border-radius: 9.072px;
+  font-family: "Geometria", sans-serif;
+  font-size: 21.168px;
+  font-weight: 500;
+  outline: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.work-with-us__wrapField input:focus,
+.work-with-us__wrapField textarea:focus {
+  border: 1px solid #045FBC !important;
+}
+
+.work-with-us__wrapField input::-moz-placeholder, .work-with-us__wrapField textarea::-moz-placeholder {
+  color: #9CA3AF;
+}
+
+.work-with-us__wrapField input::placeholder,
+.work-with-us__wrapField textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.work-with-us__wrapField input {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 77.875px;
+  line-height: 77.875px;
+  width: 100%;
+}
+
+.work-with-us__wrapField textarea {
+  padding-bottom: 26.188px;
+  padding-top: 26.188px;
+  resize: none;
+  width: 100%;
+}
+
+.work-with-us__wrapField.no-valid input,
+.work-with-us__wrapField.no-valid textarea {
+  border-color: red;
+}
+
+.work-with-us__wrapFieldUpload {
+  align-items: center;
+  display: flex;
+  transition: 0.3s ease 0s;
+}
+
+.work-with-us__wrapFieldUpload label[for=upload-file] {
+  cursor: pointer;
+}
+
+.work-with-us__wrapFieldUpload .fileUpload {
+  cursor: default;
+  display: block;
+  height: 32px;
+  min-width: 44px;
+  margin-right: 14px;
+  position: relative;
+}
+
+.work-with-us__wrapFieldUpload .fileUpload.no-valid .default-icon {
+  display: none;
+}
+
+.work-with-us__wrapFieldUpload .fileUpload.no-valid .no-falid-field-icon {
+  display: block;
+}
+
+.work-with-us__wrapFieldUpload .fileUpload .no-falid-field-icon {
+  display: none;
+}
+
+.work-with-us__wrapFieldUpload img,
+.work-with-us__wrapFieldUpload svg {
+  bottom: 8px;
+  position: relative;
+  z-index: 0;
+}
+
+.work-with-us__wrapFieldUpload .upload {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.work-with-us__wrapFieldUpload p {
+  font-size: 18.168px;
+  font-weight: 500;
+  line-height: 116.513%;
+}
+
+.work-with-us__submit {
+  align-items: center;
+  background-color: #1b1b1c;
+  border-radius: 60px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-size: 21.168px;
+  font-weight: 500;
+  line-height: 138%;
+  height: 81.609px;
+  margin-top: 55px;
+  transition: 0.3s ease 0s;
+  text-align: center;
+  width: 363.075px;
+}
+
+.work-with-us__submit:hover {
+  background-color: #333;
+  color: #fff !important;
+}
+
+.page-work-with-us__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 220px;
+  margin-top: 285px;
+}
+
+.page-work-with-us__item:nth-child(1) {
+  width: 49%;
+}
+
+.page-work-with-us__item:nth-child(2) {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 45px;
+  width: 51%;
+}
+
+.page-work-with-us__item-content {
+  max-width: 455px;
+}
+
+.page-work-with-us__item-content h1,
+.page-work-with-us__item-content h2,
+.page-work-with-us__item-content h3,
+.page-work-with-us__item-content h4,
+.page-work-with-us__item-content h5,
+.page-work-with-us__item-content h6 {
+  font-size: 44.4px;
+  line-height: 129.405%;
+}
+
+.page-work-with-us__item-content a {
+  display: table;
+  font-size: 19.168px;
+  line-height: 152.399%;
+  margin-top: 18px;
+}
+
+.page-work-with-us__item-content a:hover::after {
+  background-color: #045fbc;
+}
+
+.page-work-with-us__item-content a::after {
+  background-color: #000;
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 5px;
+  transition: 0.3s ease 0s;
+  width: 115%;
+}
+
+.page-work-with-us__blockImage {
+  padding-bottom: 133%;
+}
+
+.page-work-with-us__blockText {
+  padding-bottom: 38px;
+  padding-top: 38px;
+}
+
+.page-work-with-us__blockText p {
+  font-size: 20.168px;
+  line-height: 144.842%;
+}
+
 /* Footer */
 
 .footer {
@@ -3071,6 +3401,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
 @media screen and (min-width: 576px) {
   .header .menu__bg-mobile {
     display: none;
+  }
+
+  .work-with-us__wrapField.wrap-field-left {
+    padding-right: 10px;
+  }
+
+  .work-with-us__wrapField.wrap-field-right {
+    padding-left: 10px;
   }
 }
 
@@ -3538,6 +3876,40 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .hiring-experience.hiring-experience-vacancy-page .hiring-experience__button {
     height: 72px;
     width: 300px;
+  }
+
+  .work-with-us__wrapField input,
+  .work-with-us__wrapField textarea {
+    font-size: 20px;
+  }
+
+  .work-with-us__wrapField input {
+    height: 72px;
+  }
+
+  .work-with-us__submit {
+    font-size: 20px;
+    height: 72px;
+    line-height: 72px;
+    width: 320px;
+  }
+
+  .page-work-with-us__items {
+    margin-bottom: 180px;
+    margin-top: 200px;
+  }
+
+  .page-work-with-us__item-content h1,
+  .page-work-with-us__item-content h2,
+  .page-work-with-us__item-content h3,
+  .page-work-with-us__item-content h4,
+  .page-work-with-us__item-content h5,
+  .page-work-with-us__item-content h6 {
+    font-size: 36px;
+  }
+
+  .page-work-with-us__blockText p {
+    font-size: 18px;
   }
 }
 
@@ -4208,6 +4580,70 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 280px;
   }
 
+  .work-with-us__wrapField.wrapFieldMessage textarea {
+    height: 280px;
+  }
+
+  .work-with-us__wrapField {
+    margin-bottom: 35px;
+  }
+
+  .work-with-us__wrapField label {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .work-with-us__wrapField input,
+  .work-with-us__wrapField textarea {
+    font-size: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .work-with-us__wrapField input {
+    height: 65px;
+  }
+
+  .work-with-us__wrapFieldUpload .fileUpload {
+    margin-right: 7px;
+  }
+
+  .work-with-us__wrapFieldUpload img,
+  .work-with-us__wrapFieldUpload svg {
+    bottom: 4px;
+    height: 38px;
+    width: auto;
+  }
+
+  .work-with-us__submit {
+    font-size: 18px;
+    height: 65px;
+    line-height: 65px;
+    width: 260px;
+  }
+
+  .page-work-with-us__item-content h1,
+  .page-work-with-us__item-content h2,
+  .page-work-with-us__item-content h3,
+  .page-work-with-us__item-content h4,
+  .page-work-with-us__item-content h5,
+  .page-work-with-us__item-content h6 {
+    font-size: 32px;
+  }
+
+  .page-work-with-us__item-content a {
+    font-size: 16px;
+  }
+
+  .page-work-with-us__blockText {
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+
+  .page-work-with-us__blockText p {
+    font-size: 16px;
+  }
+
   .footer__item:nth-child(2),
   .footer__item:nth-child(3) {
     flex: 0 0 300px;
@@ -4528,6 +4964,24 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 100%;
   }
 
+  .page-work-with-us__items {
+    margin-bottom: 100px;
+    margin-top: 150px;
+  }
+
+  .page-work-with-us__item:nth-child(2) {
+    padding-left: 25px;
+  }
+
+  .page-work-with-us__item-content h1,
+  .page-work-with-us__item-content h2,
+  .page-work-with-us__item-content h3,
+  .page-work-with-us__item-content h4,
+  .page-work-with-us__item-content h5,
+  .page-work-with-us__item-content h6 {
+    font-size: 26px;
+  }
+
   .footer__item:nth-child(2),
   .footer__item:nth-child(3) {
     flex: 0 0 50%;
@@ -4757,6 +5211,20 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .numbers-blocks__blockText p {
     text-align: center;
+  }
+
+  .page-work-with-us__item:nth-child(1) {
+    width: 100%;
+  }
+
+  .page-work-with-us__item:nth-child(2) {
+    padding-left: 0;
+    padding-top: 35px;
+    width: 100%;
+  }
+
+  .page-work-with-us__item-content {
+    max-width: 100%;
   }
 }
 
@@ -5302,6 +5770,84 @@ body._touch .header .menu__list > li._active .menu__arrow {
     margin-top: 25px;
   }
 
+  .work-with-us__wrapField.wrapFieldMessage {
+    margin-bottom: 12px;
+  }
+
+  .work-with-us__wrapField.wrapFieldMessage textarea {
+    height: 200px;
+  }
+
+  .work-with-us__wrapField {
+    width: 100%;
+  }
+
+  .work-with-us__wrapField input,
+  .work-with-us__wrapField textarea {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .work-with-us__wrapField input {
+    height: 60px;
+  }
+
+  .work-with-us__wrapFieldUpload .fileUpload {
+    margin-right: 0;
+  }
+
+  .work-with-us__wrapFieldUpload img,
+  .work-with-us__wrapFieldUpload svg {
+    bottom: 1px;
+    height: 32px;
+  }
+
+  .work-with-us__wrapFieldUpload p {
+    font-size: 16px;
+  }
+
+  .work-with-us__submit {
+    margin-top: 35px;
+  }
+
+  .page-work-with-us__items {
+    margin-bottom: 50px;
+    margin-top: 100px;
+  }
+
+  .page-work-with-us__item:nth-child(2) {
+    padding-top: 25px;
+  }
+
+  .page-work-with-us__item-content h1,
+  .page-work-with-us__item-content h2,
+  .page-work-with-us__item-content h3,
+  .page-work-with-us__item-content h4,
+  .page-work-with-us__item-content h5,
+  .page-work-with-us__item-content h6 {
+    font-size: 24px;
+  }
+
+  .page-work-with-us__item-content a {
+    font-size: 15px;
+  }
+
+  .page-work-with-us__item-content a::after {
+    margin-top: 0;
+    width: 108%;
+  }
+
+  .page-work-with-us__blockText {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .page-work-with-us__blockText p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
   .footer {
     padding-bottom: 25px;
   }
@@ -5365,6 +5911,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .work__name {
     font-size: 20px;
     margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .work-with-us__submit {
     width: 100%;
   }
 }
