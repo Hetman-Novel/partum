@@ -3230,6 +3230,22 @@ body._touch .header .menu__list > li._active .menu__arrow {
   line-height: 144.842%;
 }
 
+/* Page - FAQ */
+
+.page-faq {
+  margin-bottom: 348px;
+  margin-top: 46px;
+}
+
+.page-faq .block__title,
+.page-faq .block__blockText {
+  padding-left: 15px;
+}
+
+.page-faq .block__title:before {
+  display: none;
+}
+
 /* Footer */
 
 .footer {
@@ -3410,11 +3426,31 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .work-with-us__wrapField.wrap-field-right {
     padding-left: 10px;
   }
+
+  .page-faq .block__blockText ul li,
+  .page-faq .block__blockText ol li,
+  .page-faq .block__blockText p {
+    font-weight: 500;
+  }
 }
 
 @media screen and (min-width: 661px) {
   .header .menu__illustration {
     display: none;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .page-faq .hiring-experience__secondItem:nth-child(1) {
+    border: 1px solid #d8d8d8;
+    border-right: 0;
+    padding-left: 16px;
+    padding-top: 38px;
+    width: 40%;
+  }
+
+  .page-faq .hiring-experience__secondItem:nth-child(2) {
+    width: 60%;
   }
 }
 
@@ -3573,6 +3609,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .work.work-vacancy-page .work__filter {
     padding-left: 63px;
   }
+
+  .page-faq .block__title {
+    padding-bottom: 41px;
+    padding-top: 41px;
+  }
 }
 
 @media screen and (max-width: 1600.98px) {
@@ -3613,6 +3654,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     left: calc(41% - 7px);
     top: 17%;
     width: auto;
+  }
+
+  .page-faq {
+    margin-bottom: 260px;
   }
 }
 
@@ -4070,6 +4115,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .in-their-words {
     padding-top: 80px;
+  }
+
+  .page-faq {
+    margin-bottom: 200px;
   }
 }
 
@@ -4644,6 +4693,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
     font-size: 16px;
   }
 
+  .page-faq {
+    margin-bottom: 150px;
+    margin-top: 10px;
+  }
+
   .footer__item:nth-child(2),
   .footer__item:nth-child(3) {
     flex: 0 0 300px;
@@ -4980,6 +5034,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .page-work-with-us__item-content h5,
   .page-work-with-us__item-content h6 {
     font-size: 26px;
+  }
+
+  .page-faq {
+    margin-top: 0;
   }
 
   .footer__item:nth-child(2),
@@ -5846,6 +5904,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .page-work-with-us__blockText p {
     font-size: 15px;
     font-weight: 400;
+  }
+
+  .page-faq {
+    margin-bottom: 50px;
   }
 
   .footer {
