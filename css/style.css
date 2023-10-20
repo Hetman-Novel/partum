@@ -2098,6 +2098,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 /* Page - Hiring process */
 
+.hiring-process-page {
+  overflow: hidden;
+}
+
 .benefits-with-us {
   margin-top: -3px;
   padding-bottom: 120px;
@@ -2275,7 +2279,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .wrapper-values {
   margin-bottom: 200px;
   position: relative;
-  overflow: hidden;
 }
 
 .wrapper-values .wrap-values {
@@ -2301,7 +2304,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .moving-element-two {
   animation: moveElementTwo 8s linear infinite;
-  bottom: 18%;
+  bottom: 42%;
   height: 187px;
   right: 100%;
   position: absolute;
@@ -2818,7 +2821,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .benefits-with-us.list-is-not-indented .benefits-with-us__listItem h5,
 .benefits-with-us.list-is-not-indented .benefits-with-us__listItem h6 {
   font-size: 18.168px;
-  font-weight: 400;
   line-height: 160.787%;
 }
 
@@ -3910,6 +3912,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .moving-element-two {
+    bottom: 52%;
     height: 140px;
   }
 
@@ -4107,7 +4110,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .moving-element-two {
-    bottom: 22%;
+    bottom: 63%;
     height: 100px;
   }
 
@@ -4655,7 +4658,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .numbers-blocks {
-    padding-top: 20px;
+    padding-top: 70px;
   }
 
   .hiring-experience__item h1,
@@ -4920,7 +4923,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .moving-element-two {
-    bottom: 23%;
+    bottom: 72%;
     height: 70px;
   }
 
