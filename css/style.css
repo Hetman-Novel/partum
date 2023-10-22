@@ -5166,7 +5166,8 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .we-are-world__blockInfo .wrap-address.address-one address {
-    width: 232px;
+    transform: translateX(-103%);
+    width: 226px;
   }
 
   .we-are-world__blockInfo .wrap-address address {
@@ -5175,6 +5176,17 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .we-are-world__blockInfo .wrap-address address::before {
     display: none;
+  }
+
+  .we-are-world__blockInfo .wrap-address address::after {
+    background-color: #000;
+    bottom: 0 !important;
+    content: "";
+    display: block !important;
+    height: 1px !important;
+    left: 0;
+    opacity: 1 !important;
+    width: 100% !important;
   }
 
   .benefits-with-us .n_sec-title {
@@ -5593,17 +5605,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     top: 28px;
   }
 
-  .we-are-world__blockInfo .wrap-address address::after {
-    background-color: #000;
-    bottom: 0 !important;
-    content: "";
-    display: block !important;
-    height: 1px !important;
-    left: 0;
-    opacity: 1 !important;
-    width: 100% !important;
-  }
-
   .numbers-blocks__items {
     margin-left: 0;
     margin-right: 0;
@@ -5932,6 +5933,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .we-are-world__blockMap {
     top: 50px;
+  }
+
+  .we-are-world__blockInfo {
+    bottom: 67%;
   }
 
   .benefits-with-us__item:nth-child(1) {
