@@ -2076,6 +2076,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .we-are-world {
   padding-bottom: 58px;
   padding-top: 80px;
+  overflow: hidden;
 }
 
 .we-are-world .n_container {
@@ -2089,11 +2090,148 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .we-are-world__blockMap {
+  height: 656px;
+  left: 50%;
+  min-width: 1315px;
   pointer-events: none;
-  padding-bottom: 55%;
   position: relative;
-  top: 35px;
+  transform: translateX(-50%);
+  top: 104px;
   z-index: 0;
+}
+
+.we-are-world__blockMap img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.we-are-world__blockInfo {
+  display: flex;
+  left: calc(57% - 78px);
+  height: 80px;
+  position: absolute;
+  bottom: 65%;
+  width: 72px;
+  z-index: 1;
+}
+
+.we-are-world__blockInfo .wrap-address {
+  height: 38px;
+  position: relative;
+  width: 30px;
+}
+
+.we-are-world__blockInfo .wrap-address img {
+  cursor: pointer;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  transition: 0.6s ease 0s;
+  width: auto;
+  z-index: 1;
+}
+
+.we-are-world__blockInfo .wrap-address.address {
+  position: relative;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one,
+.we-are-world__blockInfo .wrap-address.address-second {
+  position: relative;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one.show-address address,
+.we-are-world__blockInfo .wrap-address.address-second.show-address address {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one.show-address img,
+.we-are-world__blockInfo .wrap-address.address-second.show-address img {
+  height: 40px;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one img {
+  left: 0;
+  z-index: 3;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one address {
+  transform: translateX(-100%);
+  width: 290px;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one address::before {
+  right: -12px;
+}
+
+.we-are-world__blockInfo .wrap-address.address-one address .bg {
+  right: 0;
+}
+
+.we-are-world__blockInfo .wrap-address.address-second {
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.we-are-world__blockInfo .wrap-address.address-second img {
+  bottom: 0;
+  right: 0;
+}
+
+.we-are-world__blockInfo .wrap-address.address-second address {
+  transform: translateX(11%);
+  width: 355px;
+}
+
+.we-are-world__blockInfo .wrap-address.address-second address::after {
+  background-color: #000;
+  bottom: -6px;
+  content: "";
+  display: block;
+  height: 2px;
+  opacity: 0.5;
+  position: absolute;
+  right: 5px;
+  width: 69px;
+}
+
+.we-are-world__blockInfo .wrap-address.address-second address::before {
+  left: -20px;
+  transform: scale(-1, 1);
+}
+
+.we-are-world__blockInfo .wrap-address.address-second address .bg {
+  left: 0;
+}
+
+.we-are-world__blockInfo .wrap-address address {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 5px;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s ease 0s;
+}
+
+.we-are-world__blockInfo .wrap-address address::before {
+  bottom: -29px;
+  content: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='301' height='20' viewBox='0 0 301 20' fill='none'%3e%3cpath d='M0 1H282L300.5 19.5' stroke='black'/%3e%3c/svg%3e");
+  position: absolute;
+}
+
+.we-are-world__blockInfo .wrap-address address .bg {
+  background: radial-gradient(50% 50% at 50% 50%, #FFF 85.41%, rgba(255, 255, 255, 0) 100%);
+  filter: blur(36.5px);
+  height: 121px;
+  position: absolute;
+  transform: translateY(-40%);
+  top: 0;
+  width: 120%;
+  z-index: -1;
 }
 
 /* Page - Hiring process */
@@ -4152,6 +4290,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     max-width: 320px;
   }
 
+  .we-are-world__blockInfo {
+    left: calc(57% - 70px);
+  }
+
   .benefits-with-us .n_sec-title {
     max-width: 630px;
   }
@@ -4241,6 +4383,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 160px;
   }
 
+  .we-are-world__blockInfo {
+    left: calc(57% - 65px);
+  }
+
   .in-their-words {
     padding-top: 80px;
   }
@@ -4271,6 +4417,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .we-are-world .n_sec-title {
     max-width: 260px;
+  }
+
+  .we-are-world__blockInfo {
+    left: calc(57% - 55px);
   }
 
   .benefits-with-us .n_sec-title {
@@ -4703,6 +4853,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     margin-top: 35px;
   }
 
+  .we-are-world .n_sec-title {
+    max-width: 100%;
+  }
+
   .benefits-with-us__items {
     margin-top: 80px;
   }
@@ -4836,6 +4990,34 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 }
 
+@media screen and (max-width: 960.98px) {
+  .we-are-world__blockInfo {
+    left: calc(57% - 45px);
+  }
+
+  .we-are-world__blockInfo .wrap-address img {
+    height: 26px;
+  }
+
+  .we-are-world__blockInfo .wrap-address.address-one.show-address img,
+  .we-are-world__blockInfo .wrap-address.address-second.show-address img {
+    height: 33px;
+  }
+
+  .we-are-world__blockInfo .wrap-address.address-second address {
+    transform: translateX(13%);
+    width: 280px;
+  }
+
+  .we-are-world__blockInfo .wrap-address.address-second address::after {
+    display: none;
+  }
+
+  .we-are-world__blockInfo .wrap-address address {
+    font-size: 15.9px;
+  }
+}
+
 @media screen and (max-width: 900.98px) {
   .vacancies__item {
     width: calc(50% - 24px);
@@ -4883,6 +5065,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .work-with-us__itemBlock p {
     font-size: 16px;
+  }
+
+  .we-are-world__blockInfo {
+    left: calc(57% - 35px);
   }
 }
 
@@ -4965,8 +5151,30 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 74px;
   }
 
-  .we-are-world .n_sec-title {
-    max-width: 180px;
+  .we-are-world__blockMap {
+    height: 642px;
+    min-width: 1100px;
+    top: 42px;
+    transform: translateX(-55%);
+  }
+
+  .we-are-world__blockInfo {
+    bottom: 68%;
+    height: 75px;
+    left: calc(49% - 30px);
+    width: 58px;
+  }
+
+  .we-are-world__blockInfo .wrap-address.address-one address {
+    width: 232px;
+  }
+
+  .we-are-world__blockInfo .wrap-address address {
+    margin-top: 12px;
+  }
+
+  .we-are-world__blockInfo .wrap-address address::before {
+    display: none;
   }
 
   .benefits-with-us .n_sec-title {
@@ -5374,6 +5582,28 @@ body._touch .header .menu__list > li._active .menu__arrow {
     font-size: 16px !important;
   }
 
+  .we-are-world__blockInfo .wrap-address.address-one address {
+    transform: translateX(-43%);
+    top: 28px;
+    z-index: 2;
+  }
+
+  .we-are-world__blockInfo .wrap-address.address-second address {
+    transform: translateX(-45%);
+    top: 28px;
+  }
+
+  .we-are-world__blockInfo .wrap-address address::after {
+    background-color: #000;
+    bottom: 0 !important;
+    content: "";
+    display: block !important;
+    height: 1px !important;
+    left: 0;
+    opacity: 1 !important;
+    width: 100% !important;
+  }
+
   .numbers-blocks__items {
     margin-left: 0;
     margin-right: 0;
@@ -5698,10 +5928,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     bottom: 12%;
     height: 42px;
     width: 70px;
-  }
-
-  .we-are-world .n_sec-title {
-    max-width: 100%;
   }
 
   .we-are-world__blockMap {
